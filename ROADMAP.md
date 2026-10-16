@@ -5,32 +5,28 @@ _Under construction._ This document tracks the project's progress from concept t
 ## Phase 1 — Requirements & Planning
 
 - [ ] Define target users and use cases
-- [ ] Write functional requirements (what the app does)
-- [ ] Write non-functional requirements (performance, security, offline use)
-- [ ] Choose the platforms: desktop **web app** and **proprietary mobile app**
-- [ ] Select the tech stack (Python, SQL, frontend framework)
-- [ ] Define the notification delivery channel (push, desktop, in-app)
-- [ ] Set scope for the first release (MVP)
+- [ ] Write functional requirements
+- [ ] Write non-functional requirements
+- [ ] Select the tech stack
+- [ ] Define the notification delivery channel
+- [ ] Set scope for the first release
 
 ## Phase 2 — Database Modeling
 
-- [ ] Define the core entities (Items, Categories, Purchases, Reminders, Users)
-- [ ] Establish relationships between entities (1-to-many, many-to-many)
-- [ ] Design the `items` table (name, category, interval, quantity)
-- [ ] Design the `categories` table (dairy, produce, pantry, etc.)
-- [ ] Design the `purchases` table (item, quantity, date purchased)
+- [ ] Define the core entities
+- [ ] Establish relationships between entities
+- [ ] Design tables
 - [ ] Define interval rules: minimum **1 day**, maximum **90 days**
-- [ ] Define the quantity scaling rule (more units → longer interval)
 - [ ] Create the ER diagram
-- [ ] Write the SQL schema / migrations
+- [ ] Write the SQL schema
 
 ## Phase 3 — Core Logic
 
 - [ ] Implement CRUD for items and categories
 - [ ] Implement purchase logging
-- [ ] Implement interval calculation (interval × quantity)
+- [ ] Implement interval calculation
 - [ ] Implement "next restock date" calculation
-- [ ] Implement the due-items query (what to buy today)
+- [ ] Implement the due-items query
 
 ## Phase 4 — Reminders & Notifications
 
@@ -45,7 +41,7 @@ _Under construction._ This document tracks the project's progress from concept t
 - [ ] Shopping list view
 - [ ] Item + category management views
 - [ ] Purchase logging view
-- [ ] Settings view (intervals, notifications)
+- [ ] Settings view
 
 ## Phase 6 — Mobile App (Proprietary)
 
