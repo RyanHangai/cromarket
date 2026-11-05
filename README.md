@@ -51,11 +51,6 @@ The idea is to allow partial use without internet, for example to check your sho
 - [Business rules](docs/business-rules/regras-de-negocio.md) ([en](docs/business-rules/business-rules.md)): how stock, consumption, batches, and notifications work.
 - [Roadmap](ROADMAP.md): the step-by-step development plan.
 
-## Contributors
-
-- **Renan** ([@Renanzinhu](https://github.com/Renanzinhu))
-- **Ryan** ([@RyanHangai](https://github.com/RyanHangai))
-
 ## License
 
 See the [LICENSE](LICENSE) file.
