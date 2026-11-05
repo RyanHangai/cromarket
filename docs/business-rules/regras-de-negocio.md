@@ -4,8 +4,6 @@
     <a href="../business-rules/business-rules.md">🇺🇸 English</a>
 </p>
 
-> **Status:** regras fechadas, sem questões em aberto no momento.
-
 ## 1. Objetivo
 
 Muita gente ainda monta a lista de compras à mão, no papel, e só percebe que algo acabou ou venceu quando já é tarde. O CroMarket registra o que a casa compra, calcula quando cada produto vai acabar ou vencer e avisa com antecedência, para que toda a família organize a ida ao mercado.
