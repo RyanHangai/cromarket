@@ -48,7 +48,7 @@ A ideia é permitir o uso parcial sem internet, por exemplo para consultar a lis
 
 ## Documentação
 
-- [Regras de negócio](docs/business-rules/business-rules.md) ([pt-BR](docs/business-rules/regras-de-negocio.md)): como funcionam estoque, consumo, lotes e notificações.
+- [Regras de negócio](docs/business-rules/regras-de-negocio.md): como funcionam estoque, consumo, lotes e notificações.
 - [Roadmap](ROADMAP.md): o plano de desenvolvimento passo a passo.
 
 ## Licença
