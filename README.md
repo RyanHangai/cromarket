@@ -1,7 +1,7 @@
 <h1 align="center">CroMarket</h1>
 
 <p align="center">
-  🇺🇸 English | <a href="README-pt-BR.md">🇧🇷 Português</a>
+  🇺🇸 English | <a href="README-PT-BR.md">🇧🇷 Português</a>
 </p>
 
 A shopping assistant, built with Python and SQL, that tracks what your household buys, predicts when each product will run out or expire, and reminds you in time to plan your shopping trip.
