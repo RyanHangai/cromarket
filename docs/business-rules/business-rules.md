@@ -141,6 +141,12 @@ The workspace **creator** is a guardian and can designate one more adult as a gu
 
 **Example.** Ana goes to the store, checks off milk and rice, and finishes the list. The app creates a milk batch (box of 12, default shelf life) and a rice batch, and asks whether she wants to adjust anything. The milk box came with 6, so she edits it; the rice stays as it is. Had João (teen) finished the list, the batches would only enter the stock after an adult validated them.
 
+### BR-12: Manual stock entry
+
+**Rule.** The user can add to the stock a product that was already at home and was not bought through the app. They enter the product, the quantity, and the period in days, which is the time that is still left, counted from today. The app creates a batch starting on the entry date and ending at start + period. This batch works like any other: it appears in the stock and in the calendar, generates the alerts and the notice (BR-03 and BR-04), and enters the next purchases list (BR-09). Manual entry does not go through the shopping list, and the batch can be edited later directly in the stock.
+
+**Example.** Ana already has a box of 12 milks at home and thinks it will last 30 more days. On Nov 10, she adds to the stock: milk, 12 units, period of 30 days. The app creates a batch from Nov 10 to Dec 10, sends alerts on Dec 8 and Dec 9, and a notice on Dec 10.
+
 ## 4. Complete Example
 
 Scenario: milk in a box of 6, consumption of 1 per day, default shelf life of 120 days, advance notice of 2 days (restocking and expiration). Stock at the end of each day.
