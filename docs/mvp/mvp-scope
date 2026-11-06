@@ -1,0 +1,50 @@
+<h1 align="center">MVP Scope</h1>
+
+<p align="center">
+  <a href="escopo-do-mvp.md">🇧🇷 Português</a> | 🇺🇸 English
+</p>
+
+## 1. Objective
+
+Make the shopping trip easier: the user records what they want to buy and what they already have at home, sets how long each product lasts, and the app notifies them and adds the product to the list. The MVP is for **one person using it alone**.
+
+## 2. Main cycle
+
+1. **Shopping list.** Stock starts empty. The user adds to the list what they want to buy.
+2. **Finish the purchase.** They check off the items and finish the list. The checked items enter the stock as batches (BR-11).
+3. **Manage the stock.** They can also manually add items that were already at home (BR-12). In the MVP there is no daily consumption: for each product, the user sets a **period in days** (for example, 60), which applies to every new purchase. Example: a box of 12 milks lasts 2 months, so the period is 60 days. During the period, the batch sits in the stock "parked", with its full quantity. At the end of each batch's period, its stock goes to zero.
+4. **Receive the alerts.** The restocking alert comes from the **end of the product's last batch**, that is, from when no batch is left. If another batch exists, the end of the first one does not generate an alert. Near that day, the app sends the first alert (default: 2 days before, editable by the user) and the second (always 1 day before), and adds the product to the next purchases list (BR-03, BR-04, and BR-09). On the day, there is only a notice.
+5. **Repeat.** The user checks off the items on the list, finishes it, and the cycle starts again.
+6. **See the stock in a calendar.** In weekly and monthly views, each batch is a bar, from the purchase day to the end of the period. Batches of the same product are shown one below the other. The quantity of a product on a given day is the sum of the batches active on that day.
+
+**Weekly view example:** milk batch 1 runs out on Wednesday; batch 2, bought on Monday, lasts 60 days. Two bars appear, one below the other: the first ends on Wednesday and the second goes on for much longer. Until Wednesday, the quantity of milk is the sum of both batches; after that, only batch 2. The restocking alert only goes out near the end of batch 2.
+
+The cycle exists to make shopping easier and to "schedule" the next purchase, so the shopping trip is calm and unhurried.
+
+## 3. What is in the MVP
+
+| Rule | In the MVP | Note |
+|---|---|---|
+| BR-03 | Partial | Restocking only (alerts and notice), with the alert coming from the end of the last batch. No expiration. |
+| BR-04 | Partial | The first alert is editable (default: 2 days before) and the second is always 1 day before. No third alert. The rules for same-day alerts and past dates apply. |
+| BR-07 | Partial | Only the "lasts N days" form (the period). No daily consumption and no schedules. |
+| BR-08 | Partial | Units and packages only (for example, a box of 12). No weight and volume. |
+| BR-09 | Yes | Next purchases list: the product enters at the first alert, with a notice on the day. |
+| BR-11 | Partial | Finishing the list creates the stock. In the MVP, each batch receives the product's period (instead of the default shelf life). No teen validation. |
+| BR-12 | Yes | Manual stock entry of what was already at home. |
+
+## 4. Left for later
+
+| Rule | What it is |
+|---|---|
+| BR-01 | Stock decreasing every day based on consumption |
+| BR-02 | Expired batch |
+| BR-05 | Default shelf life and expiry date |
+| BR-06 | Consumption order across batches |
+| BR-07 | Daily consumption and consumption schedules |
+| BR-10 | Family, roles, and validation |
+| Others | Fixed alert date (together with consumption), configurable second and third alerts, expiration alerts, weight and volume, offline use, photo recognition with AI |
+
+How the MVP evolves: the period that the user enters today will be calculated from consumption (BR-01 and BR-07) in later versions, without changing the rest of the cycle. In the full rules, the alert already comes from the product's run-out date (when no stock is left), which is the same as the end of the last batch.
+
+Even with a single user, the database will already have the workspace, so BR-10 can come later without redoing the tables.
