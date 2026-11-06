@@ -141,6 +141,12 @@ O **criador** do espaço é responsável e pode designar mais um adulto como res
 
 **Exemplo.** Ana vai ao mercado, marca leite e arroz e finaliza a lista. O app cria um lote de leite (caixa de 12, validade padrão) e um de arroz, e pergunta se ela quer ajustar algo. A caixa de leite veio com 6, então ela edita; o arroz fica como está. Se João (adolescente) tivesse finalizado a lista, os lotes só entrariam no estoque depois que um adulto validasse.
 
+### BR-12: Entrada manual no estoque
+
+**Regra.** O usuário pode adicionar ao estoque um produto que já estava em casa e não foi comprado pelo app. Ele informa o produto, a quantidade e o prazo em dias, que é o tempo que ainda resta, contado a partir de hoje. O app cria um lote com início na data da entrada e fim no início + prazo. Esse lote funciona como qualquer outro: aparece no estoque e no calendário, gera os alertas e o aviso (BR-03 e BR-04) e entra na lista de próximas compras (BR-09). A entrada manual não passa pela lista de compras, e o lote pode ser editado depois, direto no estoque.
+
+**Exemplo.** Ana já tem uma caixa com 12 leites em casa e acha que dura mais 30 dias. Em 10/11, ela adiciona ao estoque: leite, 12 unidades, prazo de 30 dias. O app cria um lote de 10/11 a 10/12, envia alertas em 08/12 e 09/12 e um aviso em 10/12.
+
 ## 4. Exemplo completo
 
 Cenário: leite em caixa de 6, consumo de 1 por dia, validade padrão de 120 dias, antecedência de 2 dias (reposição e vencimento). Estoque no fim de cada dia.
